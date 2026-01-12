@@ -1,10 +1,9 @@
 package org.mohitiyo.paymentgateway.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.mohitiyo.paymentgateway.enums.PaymentStatus;
-import lombok.Builder;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -14,6 +13,8 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class PaymentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
